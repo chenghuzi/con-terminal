@@ -989,11 +989,7 @@ impl SessionSidebar {
         let drop_above = drop_slot == Some(i) && cx.has_active_drag();
         let drop_below = i + 1 == total && drop_slot == Some(total) && cx.has_active_drag();
 
-        let row_h = if session.subtitle.is_some() {
-            ROW_HEIGHT
-        } else {
-            ROW_HEIGHT_NO_SUBTITLE
-        };
+        let row_h = ROW_HEIGHT;
 
         let label_block: AnyElement = if is_renaming {
             if let Some(input) = rename_input {
